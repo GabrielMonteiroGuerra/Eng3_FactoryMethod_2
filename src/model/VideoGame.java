@@ -1,5 +1,5 @@
 package model;
 
-public enum VideogameJogoEletronico {
+public enum VideoGame {
 	  XBOX, SWITCH, PLAYSTATION
 	}

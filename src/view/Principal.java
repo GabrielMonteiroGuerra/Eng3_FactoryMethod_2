@@ -3,95 +3,65 @@ package view;
 import java.util.ArrayList;
 
 import model.Produto;
-import model.ProdutoBuilder;
+import model.ProdutoConstrutor;
 import model.TamanhoCamiseta;
 import model.TipoArmazenamento;
 import model.TipoCalcado;
-import model.VideogameJogoEletronico;
+import model.VideoGame;
 
 class Principal {
   public static void main(String[] args) {
     ArrayList<Produto> produtos = new ArrayList<Produto>();
 
-    Produto calcado1 = ProdutoBuilder.builder()
-        .addTamanho(35)
-        .addCor("Amarelo")
-        .addTipo(TipoCalcado.SOCIAL)
-        .addValor(150)
+    Produto calcado1 = ProdutoConstrutor.builder()
+        .adicionaCor("Rosa")
         .get();
 
-    Produto calcado2 = ProdutoBuilder.builder()
-        .addTamanho(43)
-        .addCor("Preto")
-        .addTipo(TipoCalcado.TENIS)
-        .addValor(1000)
+    Produto calcado2 = ProdutoConstrutor.builder()
+        .adicionaCor("Azul")
         .get();
 
-    Produto calcado3 = ProdutoBuilder.builder()
-        .addTamanho(36)
-        .addCor("Vermelho")
-        .addTipo(TipoCalcado.SOCIAL)
-        .addValor(5000)
+    Produto calcado3 = ProdutoConstrutor.builder()
+        .adicionaCor("Laranja")
         .get();
 
-    Produto camiseta1 = ProdutoBuilder.builder()
-        .addTamanho(TamanhoCamiseta.PP)
-        .addCor("Vermelho")
-        .addMarca("Nike")
-        .addValor(350)
+    Produto camiseta1 = ProdutoConstrutor.builder()
+        .adicionaCor("Preto")
+        .adicionaMarca("Adidas")
         .get();
 
-    Produto camiseta2 = ProdutoBuilder.builder()
-        .addTamanho(TamanhoCamiseta.GG)
-        .addCor("Cinza")
-        .addMarca("Lacoste")
-        .addValor(1000)
+    Produto camiseta2 = ProdutoConstrutor.builder()
+        .adicionaCor("Amarela")
+        .adicionaMarca("ABC")
         .get();
 
-    Produto camiseta3 = ProdutoBuilder.builder()
-        .addTamanho(TamanhoCamiseta.M)
-        .addCor("Damasco")
-        .addMarca("Gucci")
-        .addValor(10000)
+    Produto camiseta3 = ProdutoConstrutor.builder()
+        .adicionaCor("Marrom")
+        .adicionaMarca("DBC")
         .get();
 
-    Produto jogo1 = ProdutoBuilder.builder()
-        .addNome("GTA V")
-        .addVideogame(VideogameJogoEletronico.XBOX)
-        .addValor(150)
+    Produto jogo1 = ProdutoConstrutor.builder()
+        .adicionaNome("Assasins Creed")
         .get();
 
-    Produto jogo2 = ProdutoBuilder.builder()
-        .addNome("Super Mario Bros.")
-        .addVideogame(VideogameJogoEletronico.SWITCH)
-        .addValor(450)
+    Produto jogo2 = ProdutoConstrutor.builder()
+        .adicionaNome("Farcry 5")
         .get();
 
-    Produto jogo3 = ProdutoBuilder.builder()
-        .addNome("The Last of Us")
-        .addVideogame(VideogameJogoEletronico.PLAYSTATION)
-        .addValor(150)
+    Produto jogo3 = ProdutoConstrutor.builder()
+        .adicionaNome("Fortnite")
         .get();
 
-    Produto armazenamento1 = ProdutoBuilder.builder()
-        .addTipo(TipoArmazenamento.SSD)
-        .addCapacidade(240)
-        .addFabricante("Seagate")
-        .addValor(450)
+    Produto armazenamento1 = ProdutoConstrutor.builder()
+        .adicionaFabricante("ABC")
         .get();
 
-    Produto armazenamento2 = ProdutoBuilder.builder()
-        .addTipo(TipoArmazenamento.MS_NVME)
-        .addCapacidade(240)
-        .addFabricante("Samsung")
-        .addValor(1000)
+    Produto armazenamento2 = ProdutoConstrutor.builder()
+        .adicionaFabricante("XXX")
         .get();
 
-    Produto armazenamento3 = ProdutoBuilder.builder()
-        .addTipo(TipoArmazenamento.HDD)
-        .addCapacidade(1000)
-        .addFabricante("Sandisk")
-        .addValor(350)
+    Produto armazenamento3 = ProdutoConstrutor.builder()
+        .adicionaFabricante("ZZZ")
         .get();
 
     produtos.add(calcado1);
